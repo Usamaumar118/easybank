@@ -51,7 +51,9 @@ a{
     display: inline-block;
     color: var(--c-grayish-blue);
 }
-
+img{
+    max-width: 100%;
+}
 
 
 
@@ -143,11 +145,11 @@ a{
     padding: 15rem 10%; 
 
     &__wrapper{
-        padding-top: 8rem;
+        padding-top: 6rem;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
 
-        gap: 3rem;
+        gap: 4rem;
 
     }
 
@@ -161,4 +163,51 @@ a{
             margin-bottom: 3rem;
         }
     }
+}
+
+.articles{
+    padding: 15rem 10%;
+    background-color: var(--c-very-light-gray);
+
+    &__item__container{
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 4rem;
+    }
+
+    &__item{
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--c-white);
+
+        &__img{
+            height: 25rem;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        &__text{
+            padding: 6%;
+
+            &__author{
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            &__title{
+                font-size: 2.2rem;
+                font-weight: 400;
+                margin-bottom: 1rem;
+            }
+            &__para{
+                font-size: 1.6rem;
+            }
+
+        }
+
+
+    }
+
 }
