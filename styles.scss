@@ -6,4 +6,34 @@
     --c-light-grayish-blue: hsl(220, 16%, 96%);
     --c-very-light-gray: hsl(0, 0%, 98%);
     --c-white: hsl(0, 0%, 100%);
+
+    --g-primary: linear-gradient(to right, --c-lime-green, --c-bright-cyan);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'public sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--c-dark-blue);
+    line-height: 1.1;
+}
+
+p{
+    color: var(--c-grayish-blue);
 }
