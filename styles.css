@@ -33,10 +33,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: var(--c-dark-blue);
   line-height: 1.1;
+  font-weight: 400;
 }
 
 p {
   color: var(--c-grayish-blue);
+  font-weight: 300;
 }
 
 ul {
