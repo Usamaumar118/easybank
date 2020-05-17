@@ -484,6 +484,17 @@ img{
     }
 }
 
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    background: var(--g-primary);
+    color: var(--c-dark-blue);
+}
+.attribution a { 
+    color: var(--c-white);
+}
+
+
 .open,
 .overlay{
     visibility: visible;
