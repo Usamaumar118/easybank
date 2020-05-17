@@ -206,6 +206,7 @@
   <script>
 
     const navBtn = document.querySelector('.nav-btn')
+    const navBtnIcon = document.querySelector('.header__nav-icon')
     const mobileNav = document.querySelector('.header__nav')
     const body = document.querySelector('body')
 
@@ -215,6 +216,12 @@
       e.preventDefault()
       mobileNav.classList.toggle('open')
       body.classList.toggle('overlay')
+
+      if(mobileNav.classList.contains('open')){
+        navBtnIcon.src = 'images/icon-close.svg'
+      }else{
+        navBtnIcon.src = 'images/icon-hamburger.svg'
+      }
     }
 
 
