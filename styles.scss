@@ -55,7 +55,25 @@ html{
 body{
     font-size: 1.8rem;
     line-height: 1.6;
+    &::before{
+        opacity: 0;
+        visibility: 0;
+        content: '';
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+        transition: all .2s ease-in;
+        background: linear-gradient(to bottom, rgba(0,0,0, .5) 25%, rgba(0,0,0, .1));
+    }
+
+    &.overlay::before{
+        visibility: visible;
+        opacity: 1;
+    }
 }
+
+
 
 h1,h2,h3,h4,h5,h6{
     color: var(--c-dark-blue);
@@ -89,9 +107,11 @@ img{
     display: flex;
     width: 100%;
     position: fixed;
+    z-index: 2;
     align-items: center;
     justify-content: space-between;
     padding: 1.8rem var(--p-section-padding);
+    
 
     @media (max-width: 650px){
         padding-top: 2rem;
@@ -110,7 +130,15 @@ img{
     &__nav{
 
         @media (max-width: 650px){
-            display: none;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 130%;
+            background: var(--c-white);
+            width: 90%;
+            border-radius: 1rem;
+            z-index: 2;
+            transition: all .2s ease-in;
         }
 
         &__list{
@@ -118,14 +146,26 @@ img{
             align-items: center;
             justify-content: center;
 
-            
+            @media (max-width: 650px){
+                flex-direction: column;
+                padding: 3rem;
+            }
 
     
             &__item{
                 margin-right: 3rem;
                 font-size: 1.6rem;
+
+                @media (max-width: 650px){
+                    margin-right: 0;
+                    margin-bottom: 1.5rem;
+                    font-size: 2rem;
+                    color: var(--c-dark-blue);
+                }
+    
     
                 &--last{
+                    margin-bottom: 0;
                     margin-right: 0;
                 }
             }
