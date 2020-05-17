@@ -211,6 +211,10 @@ img{
     &__text{
         align-self: center;
 
+        @media (max-width: 650px){
+            padding-right: var(--p-mobile-padding);
+        }
+
         &__title{
             font-size: 6.4rem;
             margin-bottom: 3rem;
@@ -226,6 +230,12 @@ img{
             @media (max-width: 850px){
                 font-size: 4.6rem;
             }
+
+            @media (max-width: 650px){
+                font-size: 4.2rem;
+            }
+
+
         }
 
         &__para{
@@ -271,6 +281,10 @@ img{
     @media (max-width: 790px){
         text-align: center;
     }
+
+    @media (max-width: 650px){
+        font-size: 3rem;
+    }
 }
 .section-para{
     @media (max-width: 790px){
@@ -293,7 +307,7 @@ img{
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media (max-width: 650px){
+        @media (max-width: 790px){
             grid-template-columns: 1fr;
         }
 
@@ -468,4 +482,10 @@ img{
             margin-top: 2.5rem;
         }
     }
+}
+
+.open,
+.overlay{
+    visibility: visible;
+    opacity: 1;
 }
